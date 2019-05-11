@@ -13,3 +13,6 @@
 2. create service principal associated to the resource group
 3. install ICP into the resource group, passing in the service principal credentials
 
+# Attribution
+
+This work is made possible by the work presented here: https://github.com/jsturtevant/aks-examples
