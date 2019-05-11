@@ -8,9 +8,10 @@
 #   az cli
 #   name of existing resource group
 #
-RG="stage320_cdoan_nopublic"
-spname="cdoan-service-principal"
-ROLE_NAME="ICP-K8S-NOPUBLIC"
+
+RG=${1:-example_rg_public}
+spname=${2:-example-service-principal}
+ROLE_NAME=${3:-ICP-K8S-PUBLIC}
 
 az ad sp show --id "http://$spname"
 
