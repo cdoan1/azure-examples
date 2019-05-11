@@ -1,6 +1,6 @@
 # azure-examples
 
-1. before creating the role definition, replace <SUBSCRIPTIONID> with your subscription id value.
+1. before creating the role definition, replace `<SUBSCRIPTIONID>` with your subscription id value in the role-definition/*.json file.
 
 # verification
 
