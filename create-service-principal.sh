@@ -16,7 +16,7 @@ ROLE_NAME=${3:-ICP-K8S-PUBLIC}
 az ad sp show --id "http://$spname"
 
 aadClientSecret=$(az ad sp create-for-rbac --skip-assignment -n $spname -o json | jq -r .password)
-aadClientId=$(az ad sp show --id "http://$spname" | grep objectId)
+aadClientId=$(az ad sp show --id "http://$spname" | grep objectId | cut -d'"' -f4)
 
 echo "aadClientId: $aadClientId aadClientSecret: $aadClientSecret"
 
