@@ -1,6 +1,11 @@
 # azure-examples
 
-1. before creating the role definition, replace `<SUBSCRIPTIONID>` with your subscription id value in the role-definition/*.json file.
+1. before creating the role definition, replace `<SUBSCRIPTIONID>` with your subscription id value in the role-definition/*.json file
+
+```
+az account show | grep "id" | cut -d'"' -f4
+find . -name "*.json" | xargs -I % sed -i.bak 's/<SUBSCRIPTIONID>/'$(az account show | grep "id" | cut -d'"' -f4)'/' %
+```
 
 # verification
 
